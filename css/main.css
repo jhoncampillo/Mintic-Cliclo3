@@ -3,7 +3,10 @@
   padding: 0;
   /* El área de padding es el espacio entre el contenido del elemento y su borde*/
   /*box-sizing: 0; /* recalculo del  tamano de todas las cajas*/
-  /*font-family: sans-serif;*/
+  /*font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
+font-family: 'Voltaire', sans-serif;
+  */
   text-decoration: none;
   /*link sin raya */
   /*text-align: justify; /*alinear textos justificados*/
@@ -21,7 +24,7 @@ html {
 }
 /*Manejo de textos*/
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Voltaire", sans-serif;
   font-size-adjust: none;
   font-style: normal;
   font-variant: normal;
@@ -34,7 +37,7 @@ h2 {
   margin: 5px 0;
 }
 h1 {
-  font-size: 48px;
+  font-size: 55px;
   line-height: 1.18;
 }
 h2 {
@@ -48,9 +51,12 @@ a {
 pre {
   text-align: left;
   font-style: normal;
-  font: 16px/ 1.6 Monaco, Consolas, "Lucida Console", monospace;
+  /*font: 16px/ 1.6 Monaco, Consolas, "Lucida Console", monospace;*/
 }
 .grid {
+  width: 95%;
+  max-width: 150rem;
+  margin: 0 auto;
   /* height: 50%; */
   /* max-width: 90%;*/
   display: grid;
@@ -68,26 +74,38 @@ pre {
 .center {
   text-align: center;
 }
-#header {
+.header {
   grid-column: 1 / 61;
   /*height: 160px;*/
   display: grid;
   justify-content: space-between;
-  grid-template-columns: 80% 20%;
+  justify-items: center;
+}
+@media (min-width: 550px) {
+  .header {
+    grid-template-columns: 80% 20%;
+  }
 }
 
 .header-logo {
-  border-radius: 8px;
-  max-height: 160px;
+  height: 120px;
   max-width: 190px;
-  width: 180px;
-  height: 150px;
+  margin-right: 15px;
+  padding-right: 20px;
 }
-#sidebar {
+.sidebar {
   grid-column: 1 / 17;
   /*height: 629px;*/
   width: auto;
   /*align-self: auto;*/
+}
+
+@media (min-width: 450px) {
+  .sidebar-mq {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+  }
 }
 
 .login-index {
@@ -114,7 +132,13 @@ login-index a button:hover {
     rgba(27, 101, 96, 0.865983893557423) 0%
   );
 }
-
+img {
+  object-fit: cover;
+}
+.img-header {
+  width: 95%;
+  height: 100%;
+}
 .img-container {
   width: 100%;
   height: 100%;
@@ -147,8 +171,3 @@ login-index a button:hover {
   margin-top: 15px;
 }
 /*Responsive*/
-@media (max-width: 600px) {
-  pre {
-    overflow-x: scroll;
-  }
-}
