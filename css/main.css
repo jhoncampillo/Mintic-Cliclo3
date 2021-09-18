@@ -35,6 +35,7 @@ body {
 h1,
 h2 {
   margin: 5px 0;
+  color: #fff;
 }
 h1 {
   font-size: 55px;
@@ -48,11 +49,16 @@ a {
   color: #fff;
   font-size: 18px;
 }
+label {
+  color: #fff;
+  font-size: 18px;
+}
 pre {
   text-align: left;
   font-style: normal;
   /*font: 16px/ 1.6 Monaco, Consolas, "Lucida Console", monospace;*/
 }
+
 .grid {
   width: 95%;
   max-width: 150rem;
@@ -109,7 +115,7 @@ pre {
 }
 
 .login-index {
-  padding-top: 250px;
+  padding-top: 40px;
   align-self: center;
 }
 login-index a button:hover {
@@ -131,10 +137,12 @@ login-index a button:hover {
     rgba(69, 221, 212, 1) 0%,
     rgba(27, 101, 96, 0.865983893557423) 0%
   );
+  color: black;
+  font-size: 1.5rem;
 }
-img {
+/* img {
   object-fit: cover;
-}
+} */
 .img-header {
   width: 95%;
   height: 100%;
@@ -149,6 +157,7 @@ img {
    */
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 /* footer */
 .footer {
@@ -170,4 +179,21 @@ img {
 .footer-terminos {
   margin-top: 15px;
 }
-/*Responsive*/
+/***********INICIO.HTML**********/
+
+@media (min-width: 768px) {
+  .img-articulo {
+    display: grid;
+    /*grid-template-columns: 50% 50%;*/
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    /*separa las comumnas*/
+  }
+}
+
+.img-articulo {
+  column-gap: 10px;
+  margin-top: 20px;
+  height: 50%;
+  margin-top: 10px;
+}

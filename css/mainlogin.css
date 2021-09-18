@@ -1,92 +1,12 @@
 /*************** Busqueda y logos ***/
 body {
-  margin: 5px;
-  background: linear-gradient(#21c08b, #ab88ff);
-  /*background-color: #8f57fd;*/
+  margin: 25px;
+  /*background: linear-gradient(#21c08b, #ab88ff);*/
+  background-color: #48588b;
   font-family: "Mulish", sans-serif;
 }
-header {
-  width: 100%;
-  height: 90px;
-  background-color: #48588b;
-  /* background-color: #8f57fd;*/
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__img {
-  width: 200px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-.header__menu {
-  margin-right: 40px;
-}
-.header__menu ul {
-  display: none; /* oculta la lista*/
-  list-style: none;
-  padding: 0px;
-  position: absolute;
-  width: 100px;
-  text-align: right;
-  margin: 0px 0px 0px -14px;
-}
-/*Muestra la listas*/
-.header__menu:hover ul,
-ul:hover {
-  display: block;
-}
-.header__menu li {
-  margin: 10px 0px;
-}
-.header__menu li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-/* linea al hacer hoover*/
-.header__menu li a:hover {
-  text-decoration: underline;
-}
-.header__menu--profile {
-  margin-right: 8px;
 
-  display: flex; /* sube el perfil al lado del icono*/
-  align-items: center;
-  cursor: pointer;
-}
-.header__menu--profile img {
-  margin-right: 8px;
-  width: 40px;
-}
-.header__menu--profile p {
-  margin: 0px;
-  color: #ffffff;
-}
-.main {
-  height: 135px;
-  display: flex;
-  align-items: center;
-  margin-top: 100px;
-  flex-direction: column;
-}
-.main__title {
-  color: #ffffff;
-  font-size: 25px;
-}
-/* .input {
-    border: 2px solid #ffffff;
-    border-radius: 25px;
-    color: #ffffff;
-    font-family: 'Mulish', sans-serif;
-    font-size: 16px;
-    height: 20px;
-    padding: 0 20px;
-    width: 15%;
-    background-color: rgba(255, 255, 255, 0.1);
-    outline: none; /* bordes del input
-    margin-top: 15px;
-  } */
-::placeholder {
+. ::placeholder {
   color: #ffffff;
 }
 
