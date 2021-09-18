@@ -9,7 +9,9 @@ body {
 . ::placeholder {
   color: #ffffff;
 }
-
+.login-font {
+  color: #ffffff;
+}
 /*************** ***************************/
 .login {
   background-color: #48588b;
