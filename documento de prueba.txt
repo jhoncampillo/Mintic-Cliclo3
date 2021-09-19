@@ -1,0 +1,44 @@
+Nombre del proyecto: Aplicativo de administración propiedad horizontal.
+Grupo número 9 integrado por los siguientes tripulantes de la misión TIC2022 – UTP Grupo 56:
+Laura Murcia 
+Luis Albeiro Ramos
+Jhon Jairo Campillo
+Víctor Zapata
+Randy Barrios
+
+Descripción del problema a solucionar con el proyecto: las propiedades horizontales mayores a 30 unidades, comerciales y/o habitacionales cuentan por ley los siguientes órganos:
+•	Asamblea de propietarios
+•	Consejo de administración
+•	Administración
+
+Los problemas que se presentan en este tipo de organizaciones son:
+1. El manejo no adecuado de la información, ya que todo el control se lleva de forma física(en papel), o en un computador a través de tablas de Excel que corren el riesgo de inconsistencia, manipulación y perdida de información.
+Módulo de control:
+	Registro de propietarios
+	Registro de arrendatarios y/o temporales
+	Registro y control de visitantes
+	Registro de vehículos y mascotas
+	Registro de zona comunes e inventario de muebles e inmuebles.
+	Registro de ingresos y egresos.
+	Información de estado de cuenta por unidad.
+
+2. Se presenta falencias en el control de ingresos y egresos financieros que se llevan mensualmente.
+Módulo financiero:
+	Formas de recaudo. Medios de pagos por plataforma PSE. Pago consignación.
+	Cuotas ordinarias
+	Cuotas extraordinarias
+	Fondo de imprevistos
+	Control de gastos e inversiones
+
+3. Necesidad de control de reuniones para asamblea y del consejo de administración (actas, comunicados, blogs con mensajes públicos y privados) y de las comunicaciones con los usuarios(comunicados, avisos parroquiales, cobros).
+
+Módulo comunicación:
+Módulo de control de usuarios administradores, usuarios propietarios y usuarios arrendadores
+Módulo de ingresos de cuotas
+Módulo de activos fijos
+Módulo de deudores
+Módulo de proveedores
+Módulo de Blog (comunicados públicos y privados)
+Módulo de visitantes.
+
+Gracias
