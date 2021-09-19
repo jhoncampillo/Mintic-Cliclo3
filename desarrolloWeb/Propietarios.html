@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>My House PH-Propietarios</title>
+
+    <meta
+      name="viewport"
+      content="user-scalable=yes, width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:200"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Voltaire&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/font/flaticon.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <style></style>
+  </head>
+
+  <body>
+    <div class="grid">
+      <header class="header">
+        <div>
+          <h1>My House</h1>
+          <h2 class="">Control de Porpiedad Horizontal</h2>
+        </div>
+        <a href="./Inicio-aplic.html"
+          ><img src="assets/logo.jpg" alt="LogoMyHouse" class="img-header"
+        /></a>
+      </header>
+
+      <section class="sidebar">
+        <h2>My House</h2>
+        <!-- Home -->
+        <div class="sidebar">
+          <nav class="align-items-end sidebar-mq navbar navbar-light">
+            <div class="pt-5 sidebar-mq">
+              <img
+                src="./assets/propietarios.svg"
+                alt=""
+                width="40"
+                height="32"
+                class="d-inline-block align-text-center"
+              />
+              <a class="fs-4 fw-bolder text-light" href="# "
+                >Registro Propietarios
+              </a>
+            </div>
+            <!-- Arrendatario -->
+            <div class="pt-5 sidebar-mq">
+              <img
+                src="./assets/arrendatarios.svg"
+                alt=""
+                width="40"
+                height="32"
+                class="d-inline-block align-text-center"
+              />
+              <a class="fs-4 fw-bolder text-light" href="./Arrendatarios.html "
+                >Registro Arrendatarios/Temporales
+              </a>
+            </div>
+            <!-- Visitantes -->
+            <div class="pt-5 sidebar-mq">
+              <img
+                src="./assets/visitante.svg"
+                alt=""
+                width="40"
+                height="32"
+                class="d-inline-block align-text-center"
+              />
+              <a class="fs-4 fw-bolder text-light" href="./Visitantes.html ">Visitantes </a>
+            </div>
+            <!-- Vehiculos -->
+            <div class="pt-5 sidebar-mq">
+              <img
+                src="./assets/coche.svg"
+                alt=""
+                width="40"
+                height="32"
+                class="d-inline-block align-text-center"
+              />
+              <a class="fs-4 fw-bolder text-light" href="# "
+                >Registro Vehiculos/Mascotas
+              </a>
+            </div>
+            <!-- Areas comunes -->
+            <div class="pt-5 sidebar-mq">
+              <img
+                src="./assets/casa.svg"
+                alt=""
+                width="40"
+                height="32"
+                class="d-inline-block align-text-center"
+              />
+              <a class="fs-4 fw-bolder text-light" href="# "
+                >Registro Areas Comunes/Inventarios
+              </a>
+            </div>
+            <!-- Estado Cuentas -->
+            <div class="pt-5 sidebar-mq">
+              <img
+                src="./assets/dinero.svg"
+                alt=""
+                width="40"
+                height="32"
+                class="d-inline-block align-text-center"
+              />
+              <a class="fs-4 fw-bolder text-light" href="# "
+                >Estado de Cuenta
+              </a>
+            </div>
+
+            <!-- Consejo -->
+            <div class="pt-5 sidebar-mq">
+              <img
+                src="./assets/consejo.svg"
+                alt=""
+                width="40"
+                height="32"
+                class="d-inline-block align-text-center"
+              />
+              <a class="fs-4 fw-bolder text-light" href="# "
+                >Consejo Administracion
+              </a>
+            </div>
+          </nav>
+        </div>
+        <!-- Login -->
+        <div class="login-index">
+          <a class="navbar-brand fs-3" href="./Inicio-seccion.html">
+            <img
+              src="./assets/login.svg"
+              width="40"
+              height="40"
+              class=""
+              alt=""
+            />
+            <button
+              type="button"
+              class="btn btn-secondary font-weight-bold fs-1"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="  Login"
+            >
+              Login
+            </button>
+          </a>
+        </div>
+        <!-- Fin Login -->
+      </section>
+      <!-- Formularios -->
+      <article class="articulo">
+        <h2>Control de Propietarios</h2>
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              value="Mintic"
+              required
+            />
+            <div class="valid-feedback">Digite sus nombre.!</div>
+          </div>
+          <!-- fin Nombre -->
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Apellidos</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom02"
+              value="Otto"
+              required
+            />
+            <div class="valid-feedback">Digite sus apellidos!</div>
+          </div>
+          <!-- Fin Apellido -->
+          <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label"
+              >Usuario</label
+            >
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustomUsername"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+              <div class="invalid-feedback">Digite sus Usuario.</div>
+            </div>
+          </div>
+          <!-- Fin Usernmae -->
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Cedula</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom02"
+              value="Otto"
+              required
+            />
+            <div class="valid-feedback">Digite una cedula valida!</div>
+          </div>
+          <!--Fin cedula  -->
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Ciudad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom03"
+              required
+            />
+            <div class="invalid-feedback">Digite una ciudad valida.</div>
+          </div>
+          <!--Fin cedula  -->
+          <!--Telefono  -->
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Telefono</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">Digite un telefono valido</div>
+          </div>
+          <!--Fin telefono  -->
+          <!--Email  -->
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Email</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Choose...</option>
+              <option>...</option>
+            </select>
+            <div class="invalid-feedback">Digite un email Valido.</div>
+          </div>
+          <!-- Fin Email  -->
+          <!-- Casa  -->
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Casa</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">Digite el No de la Casa.</div>
+          </div>
+          <!-- Fin Casa  -->
+          <!-- Apto  -->
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Apto</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">Digite el No de la Casa.</div>
+          </div>
+        </form>
+        <hr class="pt-1" />
+        <!-- Fin Apto  -->
+        <!-- Tablas inf -->
+        <h3>Grupo Familiar</h3>
+        <table class="table table-dark table-striped pading-top">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Parentesco</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">CC/TI</th>
+              <th scope="col">Casa/Apto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Hijo</td>
+              <td>Juan Sierra</td>
+              <td>124578</td>
+              <td>Casa No.48</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Esposa</td>
+              <td>Lorena Lopez</td>
+              <td>45785122</td>
+              <td>Casa No.08</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+              <td>Casa No.23</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>empleada</td>
+              <td>Ana Pena</td>
+              <td>4471112</td>
+              <td>Casa No.01</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Fin Tabla -->
+    
+        <div class="col-12 form-grid">
+          <button class="btn btn-secondary btn-lg margin-left" type="submit">Crear</button>
+          <button class="btn btn-secondary btn-lg margin-left" type="submit">
+            Consultar
+          </button>
+          <button class="btn btn-secondary btn-lg margin-left"" type="submit">
+            Modificar
+          </button>
+          <button class="btn btn-secondary btn-lg margin-left" type="submit">Borrar</button>
+        </div>
+      </article>
+
+      <footer class="footer">
+        <section class="header-icons-container">
+          <div class="icons">
+            <a href="/"><span class="flaticon-001-facebook"></span></a>
+            <a href="/"><span class="flaticon-002-twitter"></span></a>
+            <a href="/"><span class="flaticon-011-instagram"></span></a>
+            <a href="/"><span class="flaticon-003-whatsapp"></span></a>
+            <a href="/"><span class="flaticon-008-youtube"></span></a>
+          </div>
+        </section>
+        <div class="footer-terminos">
+          <a href="/">Terminos de uso</a>
+          <a href="/">Declaracion de privacidad</a>
+          <a href="/">Centro de ayuda</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
