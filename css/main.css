@@ -122,6 +122,7 @@ pre {
 .login-index {
   padding-top: 40px;
   align-self: center;
+  padding-bottom: 10px;
 }
 login-index a button:hover {
   color: blanchedalmond;
@@ -157,6 +158,10 @@ login-index a button:hover {
   height: 100%;
 }
 
+.imgmaininicio {
+  width: 80%;
+  height: 70%;
+}
 .img-container .imgmain {
   /* max-width: 900px; */
   /* height: 95%;
@@ -165,6 +170,7 @@ login-index a button:hover {
   height: 100%;
   object-fit: cover;
 }
+
 /* footer */
 .footer {
   grid-column: 1 / 61;

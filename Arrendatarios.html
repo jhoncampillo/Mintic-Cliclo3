@@ -140,27 +140,7 @@
             </div>
           </nav>
         </div>
-        <!-- Login -->
-        <div class="login-index">
-          <a class="navbar-brand fs-3" href="./Inicio-seccion.html">
-            <img
-              src="./assets/login.svg"
-              width="40"
-              height="40"
-              class=""
-              alt=""
-            />
-            <button
-              type="button"
-              class="btn btn-secondary font-weight-bold fs-1"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="  Login"
-            >
-              Login
-            </button>
-          </a>
-        </div>
+        
         <!-- Fin Login -->
       </section>
       <!-- Formularios -->
@@ -168,45 +148,32 @@
         <h2>Control de Arrendatarios</h2>
         <form class="row g-3 needs-validation" novalidate>
           <div class="col-md-4">
-            <label for="validationCustom01" class="form-label">Nombre</label>
+            <label for="validationCustom01" class="form-label">Nombre Arrendatario</label>
             <input
               type="text"
               class="form-control"
               id="validationCustom01"
-              value="Mintic"
+              value=""
+              placeholder="Nombre Arrendatario"
               required
             />
             <div class="valid-feedback">Digite sus nombre.!</div>
           </div>
           <!-- fin Nombre -->
           <div class="col-md-4">
-            <label for="validationCustom02" class="form-label">Apellidos</label>
+            <label for="validationCustom02" class="form-label">Apellidos Arrendatario</label>
             <input
               type="text"
               class="form-control"
               id="validationCustom02"
-              value="Otto"
+              value=""
+              placeholder="Apellidos Arrendatario"
               required
             />
             <div class="valid-feedback">Digite sus apellidos!</div>
           </div>
           <!-- Fin Apellido -->
-          <div class="col-md-4">
-            <label for="validationCustomUsername" class="form-label"
-              >Usuario</label
-            >
-            <div class="input-group has-validation">
-              <span class="input-group-text" id="inputGroupPrepend">@</span>
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustomUsername"
-                aria-describedby="inputGroupPrepend"
-                required
-              />
-              <div class="invalid-feedback">Digite sus Usuario.</div>
-            </div>
-          </div>
+          
           <!-- Fin Usernmae -->
           <div class="col-md-4">
             <label for="validationCustom02" class="form-label">Cedula</label>
@@ -214,7 +181,8 @@
               type="text"
               class="form-control"
               id="validationCustom02"
-              value="Otto"
+              value=""
+              placeholder="Documento de identidad"
               required
             />
             <div class="valid-feedback">Digite una cedula valida!</div>
@@ -226,6 +194,7 @@
               type="text"
               class="form-control"
               id="validationCustom03"
+              placeholder="Ciudad"
               required
             />
             <div class="invalid-feedback">Digite una ciudad valida.</div>
@@ -238,6 +207,7 @@
               type="text"
               class="form-control"
               id="validationCustom05"
+              placeholder="Telefono"
               required
             />
             <div class="invalid-feedback">Digite un telefono valido</div>
@@ -246,8 +216,8 @@
           <!--Email  -->
           <div class="col-md-3">
             <label for="validationCustom04" class="form-label">Email</label>
-            <select class="form-select" id="validationCustom04" required>
-              <option selected disabled value="">Choose...</option>
+            <select class="form-select" id="validationCustom04"   required>
+              <option selected disabled value="">Seleccione...</option>
               <option>...</option>
             </select>
             <div class="invalid-feedback">Digite un email Valido.</div>
@@ -260,6 +230,7 @@
               type="text"
               class="form-control"
               id="validationCustom05"
+              placeholder="No. Casa"
               required
             />
             <div class="invalid-feedback">Digite el No de la Casa.</div>
@@ -272,6 +243,7 @@
               type="text"
               class="form-control"
               id="validationCustom05"
+              placeholder="No. Apto"
               required
             />
             <div class="invalid-feedback">Digite el No de la Casa.</div>
@@ -308,8 +280,10 @@
             </tr>
             <tr>
               <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
+              <td>Hija</td>
+              <!-- <td colspan="2">Larry the Bird</td> -->
+              <td>Juliana Lopez</td>
+              <td>4525478</td>
               <td>Casa No.23</td>
             </tr>
             <tr>
