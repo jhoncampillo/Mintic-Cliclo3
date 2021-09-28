@@ -1,0 +1,32 @@
+{
+  "folders": [
+	{
+		"path": "..\\ProyectosJJ\\Platzi Developer Frontend"
+	},
+	{
+		"path": "..\\ProyectosJJ\\Platzy Maquetacion Grid CSS"
+	},
+	{
+		"path": "..\\ProyectosJJ\\CSS Grid Ejemplos"
+	},
+	{
+		"path": "..\\ProyectosJJ\\Platzy Diseno web CCS Grid-Flexbox"
+	},
+	{
+		"path": "."
+	},
+	{
+		"path": "..\\Proyectos Udemy\\HTML-CSS- JAVA-AJAX- PHP"
+	},
+	{
+		"path": "..\\Proyectos Udemy\\Patrones de Diseno Doc\\Patrones de Diseño"
+	},
+	{
+		"path": "..\\MINTIC CICLO 3\\Scrum 0 - 1\\desarrollo"
+	}
+],
+  "settings": {
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.multiRootWorkspaceName": "PaginaMintic"
+  }
+}

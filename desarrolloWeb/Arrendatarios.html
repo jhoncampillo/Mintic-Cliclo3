@@ -37,7 +37,7 @@
       <header class="header">
         <div>
           <h1>My House</h1>
-          <h2 class="">Control de Porpiedad Horizontal</h2>
+          <h2 class="">Control de Propiedad Horizontal</h2>
         </div>
         <a href="./Inicio-aplic.html"
           ><img src="assets/logo.jpg" alt="LogoMyHouse" class="img-header"
@@ -155,9 +155,9 @@
               class="btn btn-secondary font-weight-bold fs-1"
               data-toggle="tooltip"
               data-placement="top"
-              title="  Login"
+              title="  Logout"
             >
-              Login
+              Logout
             </button>
           </a>
         </div>
@@ -165,7 +165,7 @@
       </section>
       <!-- Formularios -->
       <article class="articulo">
-        <h2>Control de Arrendatarios</h2>
+        <h2>Control de Arrendatarios/Temporales</h2>
         <form class="row g-3 needs-validation" novalidate>
           <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Nombre</label>
@@ -220,7 +220,7 @@
             <div class="valid-feedback">Digite una cedula valida!</div>
           </div>
           <!--Fin cedula  -->
-          <div class="col-md-6">
+          <div class="col-md-4">
             <label for="validationCustom03" class="form-label">Ciudad</label>
             <input
               type="text"
@@ -230,7 +230,16 @@
             />
             <div class="invalid-feedback">Digite una ciudad valida.</div>
           </div>
-          <!--Fin cedula  -->
+          <!--Fin ciudad  -->
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">A/T</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Arrendarario</option>
+              <option>Temporal</option>
+            </select>
+            <div class="invalid-feedback">Digite un email Valido.</div>
+          </div>
           <!--Telefono  -->
           <div class="col-md-3">
             <label for="validationCustom05" class="form-label">Telefono</label>
@@ -248,7 +257,8 @@
             <label for="validationCustom04" class="form-label">Email</label>
             <select class="form-select" id="validationCustom04" required>
               <option selected disabled value="">Choose...</option>
-              <option>...</option>
+              <option>@gmail.com</option>
+              <option>@hotmail.com</option>
             </select>
             <div class="invalid-feedback">Digite un email Valido.</div>
           </div>

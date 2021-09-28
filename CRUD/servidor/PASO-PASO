@@ -1,0 +1,154 @@
+// Cre el packet.json
+npm init --yes
+
+//Instalar express
+"npm install express --save"
+Adiocina los node_modules
+
+//creo" app.js"
+
+//pruebo el erchivo = node app.js
+//reviso el "localhost:3000 "en el navegador
+
+//Instalar el nodemon --Es importante para poder avctivar el servidor de escucha
+y esta a la espectativa de cualquier cambio en el servidor,
+"npm install -g nodemon "
+Luego configurarlo en el packet.json: "dev":"nodemon app.js"
+lo probamos "npm run dev"
+
+//Asignar Puerto Automatico
+app.set("puerto", process.env.PORT || 3000);
+app.listen(app.get("puerto"), function () {
+console.log("ejemplo de escucha on puerto " + app.get("puerto"));
+});
+
+//MIDELLWARES - SON USADOS MAS NO INSTALDOS YA QUE VIENEN POR DEFECTO EN EL NODE
+Resultado de imagen para middleware node js que es
+Un middleware es un bloque de código que se ejecuta entre la petición que hace el usuario (request) hasta que la petición llega al servidor. ... Es inevitable utilizar middlewares en una aplicación en Node.
+HAY QUE CONSUMIR ANTES DE LAS RUTAS
+
+- Se instala Morgan que sirve para pintar petisiones HTTP- get -post -push
+  npm i morgan --save
+
+-tambien instalar el CORS qye sirve para hacer peticiones a servidores externos.
+'npm install cors --save'
+//Instalamos-requerimos y usamos
+
+//CREEO UNA CARPETA public DONDE VA TODO LO DEL CLIENTE
+Creo el html
+
+//creo el static middleware
+const path = require('path')
+
+//HISTORY Vue.js
+Vue utiliza el modo history para simular rutas de un sitio web ya que al ser SPA es un simple
+HTML. esto trae problemas con Express por eso hay que agregar el Middleware de config.
+https:routers.vuejs.org/guide/essential/history-mode.html#example-server-configurations
+se llama "connect-history-api-fallback"
+npm install --save connect-history-api-fallback
+
+Nodemon Babel- transformar JS de ultima generacion y ejecutarlo en cualquier navegador.
+intalar babel (interpretar el codigo de ES6 a ES5 pasar )
+npm install -D @babel/core @babel/cli @babel/preset-env @babel/node
+
+//creamos un archivo .babelrc
+{
+"presets":["@babel/preset-env"]
+}
+//Configurar Script en package.json
+"scripts":{
+"dev":"nodemon app.js",
+"devbabel":"nodemon app.js --exec babel-node"
+}
+
+DESPUES DE IMPLEMENTA BABEL YA SE PUEDE utilizar import en vez de const
+
+POR ULTIMO PRUEBO CON npm run devbabel
+
+//CONEXION A BASE DE DATOS
+//-instalamos mongoDB port 27017 - libreria para grenerer esquemas- conexiones a la base
+//instalo libreria mongoose --save
+npm install mongoose --save
+//TODAS LAS INSTALACIONES SE REFLEJAN EN EL package.json
+pagina web https://mongosejs.com/docs/connections.html
+se crea la conexion arriba del middleware en el app.js
+
+const mongoose = require("mongoose");
+const uri = "mongodb://localhost:27017/Condominios";
+const options = { useNewUrlParser: true, useUnifiedTopology: true };
+
+//O com promesas
+//\*_ready to use . the mongoose.connect() promise resolves to mongoose instance _/
+mongoose.connect(uri, options).then(
+() => {
+console.log("Conectado a DB");
+},
+//Conncetion error
+(err) => {
+console.log(err);
+}
+);
+//Probamos la conexion con npm run devbabel
+
+//SEGUIDO UN PUNTO FUNDAMENTAL SON LAS RUTAS
+//EN ELLAS EJECUTAMOS LOS POST-DELET -UPDATE -PUSH -\* MANIPULAMOS LOS DATOS
+
+//ESQUEMAS - ESTANDARIZAR LOS DOCUMENTOS- TENER BIEN CLARO LOS CAMPOS - ATRIBUTOS, VALOR, ETC.
+
+//Creo un acarpeta llamada model y adentro un archivo llamdo "nota.js" que es donde creo el esquema o el estanda del documento "Dato"
+//Esquema a Modelo
+import moongose from "mongoose";
+const Schema = moongose.Schema;
+
+//creo el Schema
+const notaSchema = new Schema({
+  nombre: { type: String, required: [true, "Nombre Obligatorio"] },
+  // si no es requeried no necesita typado  solo el tipo de dato
+  descripcion: String,
+  usuarioID: String,
+  date: { type: Date, default: Date.now },
+  activo: { type: Boolean, default: true },
+});
+
+//Ahora lo combierto a MODELO para luego utilizarllo en
+//las rutas
+//seguuido lo exporto
+const Nota = moongose.model("Nota", notaSchema);
+export default Nota;
+
+
+//AHORA CREO LAS RUTAS - POST
+//para poderle enviar datos
+//creo una carpeta llamada rutas
+//GENERO LA RUTAS CON EXPRESS
+import express from "express";
+const router = express.Router();
+
+//AHORA IMPORTO EL MODELO
+import Nota from "../models/nota";
+
+//AGREGAR UNA nota -POST
+router.post("/nota-nueva", async (req, res) => {
+  //defino el documento
+  //res = respuestas de parte del cliente
+  //req= informacin del cleinte
+  const body = req.body;
+  try {
+    const notaDB = await Nota.create(body);
+    res.status(200).json(notaDB);
+  } catch {
+    return res.status(500).json({
+      mensaje: "Ocurrio un Error",
+      err,
+    });
+  }
+});
+
+//LUEGO EXPORTO  LA CONFIGURACION DE EXPRESS
+module.exports = router;
+
+//abro el postman y creo el modelo del arcuvo a enviar
+//y el darle send se nevia a la base de datos
+
+
+//RUTAS METODO  DE GET
