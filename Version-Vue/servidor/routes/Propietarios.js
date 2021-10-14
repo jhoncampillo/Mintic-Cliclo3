@@ -11,8 +11,8 @@ router.post("/propietarios-nuevo", async (req, res) => {
   //req= informacin del cleinte
   const body = req.body;
   try {
-    const notaDB = await PropietarioModel.create(body);
-    res.status(200).json(notaDB);
+    const propBD = await PropietarioModel.create(body);
+    res.status(200).json(propBD);
   } catch (error) {
     console.log(String(error));
     return res.status(500).json({
@@ -27,9 +27,9 @@ router.get("/propietarios/:id", async (req, res) => {
   //con el id busco en la base de datos
   const _id = req.params.id;
   try {
-    const notaDB = await PropietarioModel.findOne({ _id });
+    const propBD = await PropietarioModel.findOne({ _id });
     //respuesta
-    res.json(notaDB);
+    res.status(200).json(propBD);
   } catch (error) {
     return res.status(500).json({
       mensaje: "Ocurrio un error",
@@ -42,8 +42,8 @@ router.get("/propietarios/:id", async (req, res) => {
 
 router.get("/propietarios", async (req, res) => {
   try {
-    const notaDB = await PropietarioModel.find();
-    res.json(notaDB);
+    const propBD = await PropietarioModel.find();
+    res.status(200).json(propBD);
   } catch (error) {
     return res.status(500).json({
       mensaje: "Ocurrio un error",
@@ -56,14 +56,14 @@ router.get("/propietarios", async (req, res) => {
 router.delete("/propietarios/:id", async (req, res) => {
   const _id = req.params.id;
   try {
-    const notaDB = await PropietarioModel.findByIdAndDelete({ _id });
+    const propBD = await PropietarioModel.findByIdAndDelete({ _id });
     //valido si existe
     if (!notaDB) {
       return res.status(404).json({
         mensaje: "No se encontro el Id Indicado",
       });
     }
-    res.json(notaDB);
+    res.json(propBD);
   } catch (error) {
     return res.status(500).json({
       mensaje: "Ocurrio un error",
@@ -78,9 +78,12 @@ router.put("/propietarios/:id", async (req, res) => {
   const body = req.body;
   try {
     //envio la actualizcion con el id y el nuebo body del registro
-    const notaDB = await Nota.findByIdAndUpdate(_id, body, { new: true });
-    res.json(notaDB);
+    const propBD = await PropietarioModel.findByIdAndUpdate(_id, body, {
+      new: true,
+    });
+    res.json(propBD);
   } catch (error) {
+    console.log(String(error));
     return res.status(500).json({
       mensaje: "Ocurrio un error",
       error,

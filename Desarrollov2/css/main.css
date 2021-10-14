@@ -172,20 +172,20 @@ login-index a button:hover {
 }
 
 /* footer */
-.footer {
+footer {
   grid-column: 1 / 61;
   height: 160px;
   background-color: #48588b;
   width: 100%;
 }
-.footer a {
-  color: #ffffff;
+footer a {
+  color: black;
   cursor: pointer;
   font-size: 14px;
   padding-left: 30px;
   text-decoration: none;
 }
-.footer a:hover {
+footer a:hover {
   text-decoration: underline;
 }
 .footer-terminos {

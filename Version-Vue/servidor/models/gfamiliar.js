@@ -1,27 +1,23 @@
 //Esquema a Modelo
 import moongose from "mongoose";
 const Schema = moongose.Schema;
+
 //creo el Schema
-const notaSchema = new Schema(
+const gFamiliarSchema = new Schema(
   {
     nombre: { type: String, required: [true, "Nombre Obligatorio"] },
     // si no es requeried no necesita typado  solo el tipo de dato
     apellidos: { type: String, required: [true, "Apellidos Obligatorio"] },
-    usuarioID: String,
-    cedula: { type: String, required: [true, "Cedula Obligatorio"] },
-    ciudad: String,
-    telefono: String,
-    A_T: String,
-    casa: String,
-    apartamento: String,
+    cedulaf: { type: String, required: [true, "Cedula Obligatoriop"] },
+    parentesco: { type: String, required: [true, "parentesco Obligatorio"] },
     date: { type: Date, default: Date.now },
-    activo: { type: Boolean, default: true },
+    propietario: { type: Schema.ObjectId, ref: "Propietarios_Arr" },
   },
-  { collection: "Arrendatarios" }
+  { collection: "GrupoFamiliar" }
 );
 
 //Ahora lo combierto a MODELO para luego utilizarllo en
 //las rutas
-//seguuido lo exporto
-const ArrendatarioModel = moongose.model("Arrendatario", notaSchema);
-export default ArrendatarioModel;
+//seguido lo exporto
+const gFamiliarModel = moongose.model("GrupoFamiliar", gFamiliarSchema);
+export default gFamiliarModel;

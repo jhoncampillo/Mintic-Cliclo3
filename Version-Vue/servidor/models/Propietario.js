@@ -3,7 +3,7 @@ import moongose from "mongoose";
 const Schema = moongose.Schema;
 
 //creo el Schema
-const notaSchema = new Schema(
+const propietarioSchema = new Schema(
   {
     nombre: { type: String, required: [true, "Nombre Obligatorio"] },
     // si no es requeried no necesita typado  solo el tipo de dato
@@ -15,14 +15,16 @@ const notaSchema = new Schema(
     email: String,
     casa: String,
     apartamento: String,
+    tipo: String,
+    tmascota: String,
     date: { type: Date, default: Date.now },
     activo: { type: Boolean, default: true },
   },
-  { collection: "Propietarios" }
+  { collection: "Propietarios_Arr" }
 );
 
 //Ahora lo combierto a MODELO para luego utilizarllo en
 //las rutas
 //seguuido lo exporto
-const PropietarioModel = moongose.model("Propietario", notaSchema);
+const PropietarioModel = moongose.model("Propietarios_Arr", propietarioSchema);
 export default PropietarioModel;
